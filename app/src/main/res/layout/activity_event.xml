@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="eventVm"
+            type="com.example.qianfei.mybaseandroid.model.EventActivityVM"/>
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8935a4"
+    android:orientation="vertical">
+
+    <TextView
+        android:text="@{eventVm.activityName}"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="100dp"
+        android:onClick="@{eventVm.clickToast}"
+        android:background="@color/colorPrimary"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycle_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>
+</layout>
